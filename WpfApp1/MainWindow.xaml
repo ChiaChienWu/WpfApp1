@@ -5,11 +5,22 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WpfApp1"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
-    <Grid Loaded="Grid_Loaded">
-        <Button x:Name="btnPlay" Content="讀取" HorizontalAlignment="Left" Margin="77,377,0,0" VerticalAlignment="Top" RenderTransformOrigin="3.81,16.056" Height="26" Width="89" Click="Button_Click"/>
-        <MediaElement x:Name="media" HorizontalAlignment="Left" Height="250" Margin="204,76,0,0" VerticalAlignment="Top" Width="436" RenderTransformOrigin="0.498,0.523" Loaded="media_Loaded" UnloadedBehavior="Manual"/>
-    
+        Title="MainWindow" Height="608" Width="897">
+    <Grid Loaded="Grid_Loaded" RenderTransformOrigin="0.507,0.406" Margin="0,0,0,-5">
+        <Button x:Name="btnPlay" Content="讀取" HorizontalAlignment="Left" Margin="87,543,0,0" VerticalAlignment="Top" RenderTransformOrigin="3.81,16.056" Height="26" Width="89" Click="Button_Click"/>
+        <MediaElement x:Name="media" HorizontalAlignment="Left" Height="243" Margin="219,124,0,0" Width="430" Loaded="media_Loaded" UnloadedBehavior="Manual" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.5" Stretch="Uniform" UseLayoutRounding="False">
+            <MediaElement.LayoutTransform>
+                <TransformGroup>
+                    <ScaleTransform ScaleX="1" ScaleY="1"/>
+                    <SkewTransform/>
+                    <RotateTransform/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </MediaElement.LayoutTransform>
+        </MediaElement>
+        <Button x:Name="btnBig" Content="放大" HorizontalAlignment="Left" Margin="383,543,0,0" VerticalAlignment="Top" RenderTransformOrigin="3.81,16.056" Height="26" Width="89" Click="btnBig_Click"/>
+        <Button x:Name="btnsmall" Content="縮小" HorizontalAlignment="Left" Margin="713,543,0,0" VerticalAlignment="Top" RenderTransformOrigin="3.81,16.056" Height="26" Width="89" Click="btnsmall_Click"/>
+
     </Grid>
-   
+
 </Window>
